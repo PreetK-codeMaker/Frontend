@@ -1,0 +1,119 @@
+/*title banner component.css start*/
+
+div.titleBanner
+{
+  background-image: url('src/assets/Desktop-images/mainmenubanner.png'); /*TODO redo path*/
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+  height:200px;
+  width:100%;
+  background-size: 100% 100%;
+}
+
+h1.titleText
+{
+  font-family: 'KPMG Light',Arial,Helvetica,sans-serif;
+  color: #ffffff;
+  font-size: 5.0rem;
+  font-weight: lighter;
+  line-height: 1.2;
+  text-align: left;
+  outline: none;
+  padding-left: 100px;
+  padding-top: 50px;
+}
+
+/*title banner component.css end*/
+
+/*************************************************************************************/
+
+/*page content component.css start*/
+
+/*establish grey background to sides of main content using below 2*/
+body
+{
+  background-color: #f0f0f0;
+}
+
+div.pageLayout
+{
+  background-color: #ffffff;
+  margin: auto;
+  width: 65%;
+  padding: 10px;
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2);
+}
+
+/*content relevant to page positioning*/
+/*the width and margins work for the reporting and main menu*/
+/*will probably be different values for other pages*/
+div.contentBox
+{
+  background-color: #ffffff;
+  width: 80%;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 5px;
+}
+
+h2.pageInstruction
+{
+  color: #00338D;
+  font-family: 'KPMG Light',Arial,Helvetica,sans-serif;
+  font-size: 3rem;
+  margin: 13px 0 6px;
+  line-height: 1;
+  font-weight: normal;
+  display: block;
+  padding: 2px;
+}
+
+/*right now I think the below is only going to apply to main menu and reporting menu*/
+img.greenArrow
+{
+  height: 35px;
+  width: 35px;
+  vertical-align: bottom;
+  float: right;
+}
+
+ul
+{
+  list-style: none;
+}
+
+hr
+{
+  border:none;
+  border-top: 5px dotted #0091DA;
+  color:#fff;
+  background-color:#fff;
+  height:5px;
+  width:100%;
+  padding: 2px;
+}
+
+a.menuLink:link, a.menulink:visited, a.menulink:active
+{
+  color: #000000;
+  font-family: 'KPMG Light',Arial,Helvetica,sans-serif;
+  font-size: 2.25rem;
+  margin: 13px 0 6px;
+  line-height: 1;
+  font-weight: normal;
+  display: block;
+  text-decoration: none;
+}
+
+a.menulink:hover
+{
+  color: #000000;
+  font-family: 'KPMG Light',Arial,Helvetica,sans-serif;
+  font-size: 2.25rem;
+  margin: 13px 0 6px;
+  line-height: 1;
+  font-weight: normal;
+  display: block;
+  text-decoration: underline;
+}

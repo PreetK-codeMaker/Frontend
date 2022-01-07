@@ -1,0 +1,22 @@
+
+
+<div  class="pageContent">
+  <h2 mat-dialog-title class="pageInstruction"> {{data.name}} succesfully created</h2>
+
+  <mat-dialog-actions class="buttons">
+    <!--link to view event for the event just created-->
+    <button mat-raised-button color="primary" type="button" id="viewNewEvent"
+            [routerLink]="['desk/main/viewEvent']"
+            mat-dialog-close
+            (click)="send(data)"
+    >
+      View Event</button>
+
+    <!--link to main menu-->
+    <button mat-raised-button color="primary" class="button1" [mat-dialog-close]="true"
+            [routerLink]="['desk/main']"
+            cdkFocusInitial>Main menu</button> <!--TODO link-->
+  </mat-dialog-actions>
+  <br>
+  <p>You can now view the event and all its information, or go to the main menu.</p>
+</div>

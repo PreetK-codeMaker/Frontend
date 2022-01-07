@@ -1,0 +1,77 @@
+<br>
+><br>
+><br>
+><br>
+<body>
+<!--title banner component.html start-->
+<div class="titleBanner">
+  <h1 class="titleText">Main menu</h1>
+</div>
+<!--title banner component.html end-->
+
+<br>
+
+<!--page content component.html start-->
+
+<div class="pageLayout">
+
+  <div class="contentBox">
+
+    <h2 class="pageInstruction">Please select from the following</h2>
+
+    <br>
+
+    <ul>
+      <li>
+        <a class="menuLink" [routerLink]="['searchEvent']" >
+          Search for event
+          <img class="greenArrow" src="../../../assets/Desktop-images/menuarrowicon.PNG"  alt="forward arrow"/> <!--change src path-->
+        </a>
+      </li>
+      <li>
+        <hr>
+      </li>
+      <li>
+        <a class="menuLink" [routerLink]="['listEvent']">
+          List all events
+          <img class="greenArrow" src="../../../assets/Desktop-images/menuarrowicon.PNG" alt="forward arrow"/> <!--change src path-->
+        </a>
+      </li>
+      <li>
+        <hr>
+      </li>
+      <li>
+        <a class="menuLink" [routerLink]="['reportingMenu']">
+          Reporting
+          <img class="greenArrow" src="../../../assets/Desktop-images/menuarrowicon.PNG" alt="forward arrow"/> <!--change src path-->
+        </a>
+      </li>
+      <!--from here to the end of the list should only appear if user is a manager-->
+      <li>
+        <hr>
+      </li>
+      <li>
+        <a class="menuLink"[routerLink]="['createEvent']">
+          Create event
+          <img class="greenArrow" src="../../../assets/Desktop-images/menuarrowicon.PNG" alt="forward arrow"/> <!--change src path-->
+        </a>
+      </li>
+      <li>
+        <hr>
+      </li>
+      <li>
+        <a class="menuLink" [routerLink]="['deleteEvent']">
+          Delete event
+          <img class="greenArrow" src="../../../assets/Desktop-images/menuarrowicon.PNG" alt="forward arrow"/> <!--change src path-->
+        </a>
+      </li>
+    </ul>
+
+  </div>
+
+</div>
+
+<!--page content component.html end-->
+</body>
+
+

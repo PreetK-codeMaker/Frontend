@@ -1,0 +1,157 @@
+<br>
+<br>
+<br>
+<br>
+<div class="titleBanner">
+  <h1 class="titleText">Edit *event name*</h1>
+</div>
+<!--title banner component.html end-->
+
+<br>
+
+<div class="outerBox">
+
+  <table>
+    <tr>
+      <td colspan="2">
+        <h3 class="sectionTitle">Demographic</h3>
+        <h4 class="contactName"> Service -
+          <select>
+            <option disable selected hidden>*CURRENT SERVICE*</option>
+            <option value="advisory">Advisory</option>
+            <option value="mgmtConsult">Management Consulting</option>
+            <option value="riskConsult">Risk Consulting</option>
+            <option value="audit">Audit</option>
+            <option value="enterprise">Enterprise</option>
+            <option value="sellBiz">Selling Your Business</option>
+            <option value="tax">Tax</option>
+          </select>
+          <br>
+          Industry -
+          <select>
+            <option disable selected hidden>*CURRENT INDUSTRY*</option>
+            <option value="b&c">Building and Construction</option>
+            <option value="c&pt">Chemicals and Performance Technologies</option>
+            <option value="e&nr">Energy and Natural Resources</option>
+            <option value="mining">Mining</option>
+            <option value="finance">Financial Services</option>
+            <option value="insurance">Insurance</option>
+            <option value="fd&cd">Food, Drink and Consumer Goods</option>
+            <option value="f&d">Food and Drink</option>
+            <option value="gov">Government and Public Sector</option>
+            <option value="health">Healthcare</option>
+            <option value="indsutMan">Industrial Manufacturing</option>
+            <option value="infra">Infrastructure</option>
+            <option value="lifeSci">Life Sciences</option>
+            <option value="p&bs">Professional and Business Services</option>
+            <option value="charity">Charities and Not-For-Profit Organizations</option>
+            <option value="estate">Real Estate</option>
+            <option value="retail">Retail</option>
+            <option value="tech">Technology</option>
+          </select>
+          <br>
+          Insight -
+          <select>
+            <option value="" disable selected hidden>*CURRENT INSIGHT*</option>
+            <option value="audit">Audit</option>
+            <option value="privAudit">Private Comany Audit</option>
+            <option value="custRevGrow">Customer Revenue Growth</option>
+            <option value="finanMgmt">Financial Management</option>
+            <option value="innov">Innovation</option>
+            <option value="mega">Mega Trends</option>
+            <option value="tech">Technology</option>
+            <option value="opEffect">Operating Effectiveness</option>
+            <option value="taxStrat">Tax Strateges</option>
+            <option value="pp&rc">Public Policy and Regulatory Change</option>
+            <option value="acctStand">Accounting Standards</option>
+            <option value="riskMgmt">Risk Management</option>
+            <option value="boardGov">Board Governance</option>
+            <option value="strategy">Strategy</option>
+            <option value="changeMgmt">Change Management</option>
+            <option value="opEff">Operational Efficiency</option>
+            <option value="transactions">Transactions</option>
+            <option value="m&a">Tax implications of mergers and acquisitions</option>
+            <option value="transf">Transformation</option>
+          </select>
+        </h4>
+      </td>
+      <td rowspan="3">
+        <h3 class="sectionTitle" style="color: #6d2077;">Contacts</h3>
+
+        <!--partner information-->
+        <img src="../../../../assets/event-images/view-Event/personIcon.PNG" class="personIcon"/>
+        <select>
+          <option value="" disable selected hidden>*CURRENT PARTNER*</option>
+          <option value="Partner 1">Partner 1</option>
+          <option value="Partner 2">Partner 2</option>
+          <option value="Partner 3">Partner 3</option>
+        </select>
+
+        <br><br>
+
+        <!--manager information-->
+        <img src="personIcon.PNG" class="personIcon"/>
+        <select>
+          <option value="" disable selected hidden>*CURRENT MANAGER*</option>
+          <option value="Manager 1">Manager 1</option>
+          <option value="Manager 2">Manager 2</option>
+          <option value="Manager 3">Manager 3</option>
+        </select>
+
+        <br><br>
+
+        <!--staff list-->
+        <img src="../../../../assets/event-images/view-Event/peopleIcon.PNG" class="peopleIcon"/>
+        <h5 class="staffList">Staff list</h5>
+        <select>
+          <option value="" disable selected hidden>Add staff member</option>
+          <option value="Staff 1">Staff 1</option>
+          <option value="Staff 2">Staff 2</option>
+          <option value="Staff 3">Staff 3</option>
+        </select>
+        <ul>
+          <li>First name + last name <img src="../../../../assets/event-images/edit-event/removeButton.PNG" class="removeStaff"></li>
+          <li>First name + last name <img src="../../../../assets/event-images/edit-event/removeButton.PNG" class="removeStaff"></li>
+          <li>First name + last name <img src="../../../../assets/event-images/edit-event/removeButton.PNG" class="removeStaff"></li>
+        </ul>
+
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: #0091DA;">
+        <h3 class="sectionTitle" style="color: #fff;">Location</h3>
+        <input type="text" placeholder="*CURRENT LOCATION*">
+        <br>
+        <h3 class="sectionTitle" style="color: #fff;">Address</h3>
+        <input type="text" placeholder="*CURRENT STREET*"><br>
+        <input type="text" placeholder="*CURRENT CITY*"><br>
+        <input type="text" placeholder="*CURRENT POSTAL*"><br>
+        <input type="text" placeholder="*CURRENT PROVINCE*">
+      </td>
+      <td style="background-color: #00A3A1;">
+        <input type="date">
+        <br>
+        <input type="time">
+
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h3 class="sectionTitle">Description</h3>
+        <textarea placeholder="*DESCRIPTION FROM DB*"></textarea>
+      </td>
+      <td>
+        <h3 class="sectionTitle">Notes</h3>
+        <h4 class="contactName">Budget - $ <input type="number" placeholder="*CURRENT BUDGET*"></h4>
+        <textarea placeholder="*DESCRIPTION FROM DB*"></textarea>
+      </td>
+    </tr>
+  </table>
+
+  <br>
+
+  <!--cancel link to view event-->
+  <a class="button1" [routerLink]="['../viewEvent']" >Cancel, view event</a> <!--TODO link-->
+  <input type="submit" value="Save changes"> <!--TODO link-->
+
+</div>

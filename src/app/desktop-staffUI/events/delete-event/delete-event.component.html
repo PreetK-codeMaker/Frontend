@@ -1,0 +1,53 @@
+<br>
+<br>
+<br>
+<br>
+<body>
+
+<!--all of the below code till the end of <body> is releveant to the same page-->
+<!--it can be considered one component, but if you were to split it-->
+<!--the div titleBlock would be one, and everything after it another component-->
+<div class="titleBlock">
+  <h2 class="pageTitle">Delete event</h2>
+</div>
+
+<!--this div might be a component by itself-->
+<div class="filterBlock">
+
+  <div class="comboBox">
+    <select id="service">
+      <option value="name">Name</option>
+      <option value="partner">Partner</option>
+      <option value="manager">Manager</option>
+    </select>
+  </div>
+
+  <input type="text" id="searchParameter" autofocus/>
+
+  <!--redo link-->
+  <input type="image" class="search" id="submitSearch" src="../../../../assets/event-images/searchIcon.png" alt="search">
+
+</div>
+
+<br>
+
+<!--this div is going to be kept at a longer width as some events may have
+       a very long name-->
+<div class="eventList">
+  <table>
+    <tr>
+      <td>
+        <!--depending on how you want to do it, the event name could be a link-->
+        <!--or a submit input to the events event menu-->
+        <!--these values, except the img, need to be dynamically retreved from DB-->
+        <img src="../../../../assets/event-images/eventBullet.PNG" alt="bullet"/>
+        <input type="image" class="delete" id="deleteEvent" src="../../../../assets/event-images/trashcan.PNG" alt="delete"/>
+        <h3 class="listItem">*EVENT NAME*</h3>
+        <p>DD Month - YYYY</p>
+        <p>*EVENT DESCRIPTION*</p>
+
+      </td>
+    </tr>
+  </table>
+</div>
+</body>

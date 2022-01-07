@@ -1,0 +1,21 @@
+<div class="iPadContainer" >
+  <p>Please select an event from the option(s) below</p>
+
+  <div>
+    <table class="guestName">
+
+      <ng-container *ngFor="let event of filterEvent$ | async; let in =index "  >
+        <tr (click)="setData(event); changeRow(in)" [style.background-color]="clicked == in ? 'white':'#0091DA'" [style.color]="clicked == in ? 'black':'white'">
+          <td>{{event.eventName}}</td>
+        </tr>
+      </ng-container>
+    </table>
+  </div>
+
+  <br><br>
+
+  <a style="float: left;" id="backbutton" [routerLink]="['../']" >Return</a>
+  <a style="float: right;" id="forwardbutton" [routerLink]="['/kiosk']" >Next</a>
+
+
+</div>

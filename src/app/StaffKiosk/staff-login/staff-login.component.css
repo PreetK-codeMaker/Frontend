@@ -1,0 +1,116 @@
+div.loginLogo
+{
+  width: 30%;
+  margin-left: 35%;
+}
+
+body
+{
+  font-family: Arial,Helvetica,sans-serif;
+}
+
+
+/*general image positioning*/
+img
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img.logoAndRight
+{
+  height: 75px;
+  width: 100%;
+}
+
+/*KPMG logo header*/
+#logo
+{
+  height: 75px;
+  width: 100%;
+  padding-top: 5px;
+}
+
+
+
+/*dimensions to mimic an iPad for prod purposes on a web page*/
+#iPadContainer
+{
+  margin: auto;
+  height: 100%;
+  width: 40%;
+  margin-left: 30%;
+  margin-right: 30%;
+  background-color: white;
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  border-spacing: 10px 100px;
+  padding-bottom: 15px;
+}
+
+div.userInput
+{
+  margin-left: 25%;
+}
+
+h1
+{
+  background-color: #00338D;
+  color: white;
+  text-align: center;
+  height: 50px;
+  vertical-align: bottom;
+  line-height: 1.5;
+  font-family: 'KPMG Light',Arial,Helvetica,sans-serif;
+}
+
+p
+{
+  color: #02277F;
+  text-align: center;
+  font-size: 18pt;
+  font-family: 'KPMG Light',Arial,Helvetica,sans-serif;
+}
+
+button.loginButton
+{
+  border-radius: 8px;
+  font-size: 16pt;
+  color: white;
+  background-color: #00A3A1;
+  padding: 14px 125px;
+  margin-left: 25%;
+}
+
+/*syling for inut fields that take in text*/
+[type="text"], [type="password"]
+{
+  width: 75%;
+  height: 40px;
+  padding-left: 40px;
+  border-left:5px solid #483698;
+  border-top: 1px solid #9b9b9b;
+  border-right: 1px solid #9b9b9b;
+  border-bottom: 1px solid #9b9b9b;
+  margin: auto;
+  font-family: 'KPMG Light',Arial,Helvetica,sans-serif;
+  border-radius: 5px;
+}
+
+.glyphicon.glyphicon-user.one
+{
+  color: #483698;
+  padding: 0px 80px;
+  top: 30px;
+  margin-left: 13.5%;
+}
+
+.glyphicon.glyphicon-lock
+{
+  color: #483698;
+  padding: 0px 80px;
+  top: 30px;
+  margin-left: 13.5%;
+}

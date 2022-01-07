@@ -1,0 +1,83 @@
+#iPadContainer
+{
+  margin: auto;
+  height: 100%;
+  width: 40%;
+  margin-left: 30%;
+  margin-right: 30%;
+  background-color: white;
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  border-spacing: 10px 100px;
+  padding-bottom: 200px;
+}
+
+div.centreStuff
+{
+  margin-left: 25%;
+}
+
+h1
+{
+  background-color: #00338D;
+  color: white;
+  text-align: center;
+  height: 50px;
+  vertical-align: middle;
+  font-family: Arial,Helvetica,sans-serif;
+}
+
+p
+{
+  color: #02277F;
+  text-align: center;
+  font-size: 18pt;
+  font-family: Arial,Helvetica,sans-serif;
+
+}
+
+#forwardbutton
+{
+  border-radius: 8px;
+  font-size: 16pt;
+  color: white;
+  background-color: #00A3A1;
+  padding: 14px 70px;
+  margin-right: 2.5%;
+  font-family: Arial,Helvetica,sans-serif;
+  float: right;
+  text-decoration: none;
+}
+
+#backbutton
+{
+  border-radius: 8px;
+  font-size: 16pt;
+  color: white;
+  background-color: #0091DA;
+  padding: 14px 80px;
+  float: left;
+  font-family: Arial,Helvetica,sans-serif;
+  margin-left: 2.5%;
+  text-decoration: none;
+}
+
+table.guestName
+{
+  width: 75%;
+  border: 10px solid #F0F0F0;
+  font-family: Arial,Helvetica,sans-serif;
+  margin-left: 12.5%;
+}
+
+table.guestName tr
+{
+  text-align: left;
+}
+
+table.guestName td
+{
+  padding: 5px;
+  border-bottom: 5px solid #F0F0F0;
+}

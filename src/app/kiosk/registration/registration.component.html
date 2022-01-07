@@ -1,0 +1,78 @@
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+</head>
+<body>
+<div id = "iPadContainer">
+
+
+  <br>
+
+  <!--  <center>-->
+  <form [formGroup]="guestRegistration" (ngSubmit)="login()">
+    <div *ngIf="guestRegistration.errors" class="alert alert-danger">
+      Username or password is Invalid
+      <!--    Each div for a different kind of validation error Just like individual form control Object-->
+    </div>
+    <!--    <img src="../../../assets/images/nameIcon.PNG" class="icon1">-->
+    <i class="glyphicon glyphicon-user one"></i>
+
+    <div class="form-group">
+      <!--      <label for="guestFName">First Name</label>-->
+      <input
+        formControlName="guestFirstName"
+        id="guestFName"
+        class="form-control"
+        name="firstName"
+        type="text"
+        placeholder="First Name"
+        layout-align="center center"
+      >
+      <div *ngIf="guestFirstName.touched && guestRegistration.get('guestFirstName').invalid"
+           class="alert alert-danger">
+        <div *ngIf="guestFirstName.errors.required">
+          A first name is required
+        </div>
+      </div>
+    </div>
+    <i class="glyphicon glyphicon-user two"></i>
+    <div class="form-group">
+
+      <input
+        formControlName="guestLastName"
+        id="guestLName"
+        class="form-control"
+        type="text"
+        name="lastName"
+        placeholder="Last Name">
+      <!--      <br>-->
+      <div *ngIf="guestLastName.touched && guestLastName.invalid" class="alert alert-danger">
+        <div *ngIf="guestLastName.errors.required">A last name is required</div>
+      </div>
+    </div>
+
+    <i class="glyphicon glyphicon-envelope one"></i>
+    <div class="form-group">
+
+
+      <input
+        formControlName="guestEmail"
+        id="guestEmailAddress"
+        class="form-control"
+        type="email"
+        name="guestEmailAddress"
+        placeholder="Email Address">
+
+      <div *ngIf="guestEmail.touched && guestEmail.invalid" class="alert alert-danger">
+        <div *ngIf="guestEmail.errors.required">An email address is required</div>
+        <div *ngIf="guestEmail.errors.cannotContainSpace">Email address cannot contain space</div>
+        <div *ngIf="guestEmail.errors?.pattern">Invalid email type</div>
+        <!--        <div *ngIf="guestLastName.errors.minlength">First name should be greater then{{guestFirstName.errors.minilength.requiredLength}}</div>-->
+      </div>
+    </div>
+    <!--    <button class="btn btn-primary" type="submit">Sign Up</button>-->
+    <a  style="float: left;" id="backbutton" (click)=" newChangeToOld(false)" [routerLink]="['/kiosk']" >RETURN</a>
+    <a  style="float: right;" id="forwardbutton" (click)="sendData()" [routerLink]="['permission']">NEXT</a>
+  </form>
+</div>
+</body>

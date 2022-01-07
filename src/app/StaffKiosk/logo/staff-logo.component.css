@@ -1,0 +1,42 @@
+img
+{
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  height: 40%;
+  width: 40%;
+
+}
+
+body
+{
+  font-family: Arial,Helvetica,sans-serif;
+}
+
+div.imgHeader{
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-top: 1px solid;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+div.regHeader {
+  margin-left: 29.89%;
+  margin-right: 29.89%;
+  /*overflow: auto;*/
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-top: 1px solid;
+
+}
+.regHeader
+{
+
+  top:-40px;
+  background-color: #00338D;
+  color: white;
+  text-align: center;
+  height: 60px;
+  vertical-align: middle;
+}

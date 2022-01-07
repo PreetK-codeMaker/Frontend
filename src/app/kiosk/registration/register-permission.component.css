@@ -1,0 +1,130 @@
+body
+{
+  font-family: 'KPMG Light',Arial,Helvetica,sans-serif;
+}
+
+img
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1
+{
+  background-color: #00338D;
+  color: white;
+  text-align: center;
+  height: 60px;
+  line-height: 1;
+  font-family: 'KPMG Light',Arial,Helvetica,sans-serif;
+}
+
+.glyphicon.glyphicon-pencil.one
+{
+  color: #483698;
+  left: 35px;
+  margin-left: 10%;
+}
+
+#iPadContainer
+{
+  margin: auto;
+  height: 100%;
+  width: 40%;
+  margin-left: 30%;
+  margin-right: 30%;
+  padding-bottom: 100px;
+  background-color: white;
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  border-spacing: 10px 100px;
+}
+
+.options
+{
+  margin-left: 12%;
+  margin-right: 12%;
+}
+
+h1
+{
+  background-color: #00338D;
+  color: white;
+  text-align: center;
+  height: 50px;
+  vertical-align: middle;
+  font-family: 'KPMG Light',Arial,Helvetica,sans-serif;
+}
+
+p
+{
+  color: #02277F;
+  text-align: center;
+  font-size: 18pt;
+  font-family: 'KPMG Light',Arial,Helvetica,sans-serif;
+}
+
+#forwardbutton
+{
+  border-radius: 8px;
+  font-size: 16pt;
+  color: white;
+  background-color: #00A3A1;
+  padding: 10px 50px;
+  font-family: 'KPMG Light',Arial,Helvetica,sans-serif;
+  text-decoration: none;
+  margin-right: 5%;
+}
+
+#backbutton
+{
+  border-radius: 8px;
+  font-size: 16pt;
+  color: white;
+  background-color: #0091DA;
+  padding: 10px 60px;
+  font-family: 'KPMG Light',Arial,Helvetica,sans-serif;
+  text-decoration: none;
+  margin-left: 5%;
+}
+
+#legalstmt
+{
+  color: black;
+  font-size: 12pt;
+  font-family: 'KPMG Light',Arial,Helvetica,sans-serif;
+  width: 90%;
+  margin-left: 5%;
+  font-weight: lighter;
+}
+
+[type="text"]
+{
+  width: 75%;
+  height: 40px;
+  padding-left: 40px;
+  border-left:5px solid #483698;
+  border-top: 1px solid #9b9b9b;
+  border-right: 1px solid #9b9b9b;
+  border-bottom: 1px solid #9b9b9b;
+  margin: auto;
+  font-family: 'KPMG Light',Arial,Helvetica,sans-serif;
+}
+
+[type="checkbox"]
+{
+  float: left;
+  margin-right: 10px;
+}
+
+table
+{
+  width: 100%;
+}
+
+td
+{
+  height: 30px;
+}

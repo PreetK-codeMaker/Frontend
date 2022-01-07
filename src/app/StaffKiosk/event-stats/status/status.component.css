@@ -1,0 +1,37 @@
+#iPadContainer
+{
+  margin: auto;
+  height: 100%;
+  width: 40%;
+  margin-left: 30%;
+  margin-right: 30%;
+  background-color: white;
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  border-spacing: 10px 100px;
+  padding-bottom: 200px;
+}
+
+#backbutton
+{
+  font-family: Arial,Helvetica,sans-serif;
+  margin-left: 20%;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 16pt;
+  color: white;
+  background-color: #0091DA;
+  padding: 14px 130px;
+  font-family: Arial,Helvetica,sans-serif;
+}
+
+canvas
+{
+  width: 75%;
+  margin-left: 12.5%;
+  color: #02277F;
+  text-align: center;
+  font-size: 18pt;
+  font-family: Arial,Helvetica,sans-serif;
+}

@@ -1,0 +1,31 @@
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+</head>
+
+<div id="iPadContainer">
+
+  <p>Please enter the email your invite was sent to below.</p>
+
+  <i class="glyphicon glyphicon-envelope one"></i>
+  <div class="form-group">
+
+
+    <input
+      [formControl]="validationField"
+      formControlName="guestEmail"
+      id="guestEmailAddress"
+      class="form-control"
+      type="email"
+      name="guestEmailAddress"
+      placeholder="Email">
+    <div>
+      <br>
+      <div *ngIf="!matchError">
+        <p>That email does have a match in our system. Please enter a different email or register as a walk in.</p>>
+      </div>
+      <br>
+      <button id="forwardbutton" (click)="validate()">Continue</button>
+      <button id="backbutton" [routerLink]="['../']">Return</button>
+    </div>
+  </div>
+</div>

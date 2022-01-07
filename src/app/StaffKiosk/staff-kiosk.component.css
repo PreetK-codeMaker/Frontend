@@ -1,0 +1,123 @@
+
+
+/*!*dimensions to mimic an iPad for prod purposes on a web page*!*/
+#iPadContainer
+{
+  margin: auto;
+  height: 100%;
+  width: 40%;
+  margin-left: 30%;
+  margin-right: 30%;
+  /*padding: 25px 25px 50px 25px;*/
+  background-color: white;
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  border-spacing: 10px 100px;
+  padding-bottom: 15px;
+  /*padding-top: 25px;*/
+}
+
+
+div.centreStuff
+{
+  margin-left: 25%;
+}
+
+h1
+{
+  background-color: #00338D;
+  color: white;
+  text-align: center;
+  height: 50px;
+  vertical-align: middle;
+}
+
+p
+{
+  color: #02277F;
+  text-align: center;
+  font-size: 18pt;
+}
+
+a.loginButton
+{
+  border-radius: 8px;
+  font-size: 16pt;
+  color: white;
+  background-color: #00A3A1;
+  padding: 14px 130px;
+}
+
+/*styling for a button that moves a user forward through system*/
+#forwardbutton
+{
+  border-radius: 8px;
+  font-size: 16pt;
+  color: white;
+  background-color: #00A3A1;
+  padding: 14px 80px;
+  margin-left: 25%;
+}
+
+/*styling for a button that moves a user back to previous page*/
+#backbutton
+{
+  border-radius: 8px;
+  font-size: 16pt;
+  color: white;
+  background-color: #0091DA;
+  padding: 14px 80px;
+}
+
+/*font styling for text that can be considered a legal agreement between KPMG and guest*/
+#legalstmt
+{
+  color: black;
+  font-size: 14pt;
+}
+
+/*syling for inut fields that take in text*/
+[type="text"], [type="email"]
+{
+  width: 75%;
+  border-color: #F0F0F0;
+  height: 40px;
+}
+
+/*styling for checkboxes*/
+[type="checkbox"]
+{
+  vertical-align:middle;
+}
+
+table
+{
+  width: 100%;
+  margin-left: 12.5%;
+}
+
+td
+{
+  height: 30px;
+}
+
+/*Table styling for showing events for the day*/
+table.guestName
+{
+  width: 75%;
+  border: 10px solid #F0F0F0;
+}
+
+table.guestName tr
+{
+  text-align: center;
+}
+
+table.guestName td
+{
+  padding: 5px;
+  border-bottom: 5px solid #F0F0F0;
+}
+
+

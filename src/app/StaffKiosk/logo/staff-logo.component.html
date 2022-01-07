@@ -1,0 +1,40 @@
+
+<div class="imgHeader">
+  <table>
+    <tr style="border: solid">
+      <th>
+        <mat-drawer-container class="container" autosize>
+          <div class="sidenav-content">
+                <!--           Menau-->
+                <button mat-icon-button [matMenuTriggerFor]="menu" >
+                  <mat-icon>more_vert</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu">
+                  <button mat-menu-item [routerLink]="['/StaffLogin']">
+                    <mat-icon>account_circle</mat-icon>
+                    <span>Logout</span>
+                  </button>
+                </mat-menu>
+
+          </div>
+        </mat-drawer-container>
+
+        <!--        <button mat-icon-button (click)="toggleRightSideNav()" >-->
+<!--        <mat-icon>menu</mat-icon>-->
+<!--      </button>-->
+      </th>
+      <th><img id="logo" src="../../../assets/images/logonobg.png" alt="KPMG logo"/></th>
+    </tr>
+  </table>
+</div>
+
+<body>
+<div class="regHeader">
+    <div >
+      <h1>{{banner}}</h1>
+  </div>
+
+
+</div>
+</body>
+<router-outlet></router-outlet>

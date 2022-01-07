@@ -1,0 +1,32 @@
+
+<body>
+
+  <div class="links">
+    <img class="small" src="../../assets/images/logo.jpg">
+    <div class="menu-wrap">
+      <input type="checkbox" class="toggler">
+      <div class="hamburger"><div></div></div>
+      <div class="menu">
+        <div>
+          <div>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <a [routerLink]="['main']" >Main Menu</a>
+      <a [routerLink]="['main/reportingMenu']">Reporting</a>
+      <a [routerLink]="['main/searchEvent']">Event Search</a>
+      <a [routerLink]="['main/listEvent']">All Events</a>
+    </div>
+  </div>
+
+</body>
+
+<router-outlet></router-outlet>

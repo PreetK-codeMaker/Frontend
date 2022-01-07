@@ -1,0 +1,36 @@
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+</head>
+
+<div id="iPadContainer">
+  <p>Please enter your last name, and select your full name from the options that appear</p>
+  <i class="glyphicon glyphicon-user one"></i>
+  <div class="form-group" style="padding-left: 5%;">
+    <input
+      [formControl]="filter"
+      id="guestLName"
+      class="form-control"
+      type="text"
+      name="lastName"
+      placeholder="Last name">
+  </div>
+
+  <br><br>
+  <div *ngIf= "filteredGuest$ | async as guest">
+    <div *ngIf="filter.value !== '' ">
+      <table>
+        <ng-container *ngFor=" let result of guest; let in = index">
+        <tr class="rows"  (click)="guestInfo(result, guest);
+              changeRow(in)" [style.background-color]="clicked == in ? 'white':'#0091DA'"
+            [style.color]="clicked == in ? 'black':'white'">
+          <td>{{result.guestFirstName}} &nbsp; {{result.guestLastName}}</td>
+        </tr>
+        </ng-container>
+      </table>
+    </div>
+  </div>
+  <button class="backbutton" [routerLink]="['../']" >Return</button>
+  <button class="continue" [disabled]="!isDisable"
+          (click)="validateGuest()"
+          style="position: static">Continue</button>
+</div>

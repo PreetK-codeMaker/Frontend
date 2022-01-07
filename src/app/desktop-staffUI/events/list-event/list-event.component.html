@@ -1,0 +1,152 @@
+<br>
+><br>
+><br>
+><br>
+
+<body>
+
+<!--all of the below code till the end of <body> is releveant to the same page-->
+<!--it can be considered one component, but if you were to split it-->
+<!--the div titleBlock would be one, and everything after it another component-->
+<div class="titleBlock">
+  <h2 class="pageTitle">All events</h2>
+</div>
+
+<!--this div might be a component by itself-->
+<!--what i want for this, is when a filter is selected, the page reloads with the default -->
+<!--combo box value, have a look at the KPMG event page https://home.kpmg/ca/en/home/events.html-->
+<div class="filterBlock">
+
+  <table class="filters">
+
+    <th>
+      <div class="comboBox">
+        <select id="service">
+          <option value="" disable selected hidden>Service</option>
+          <option value="advisory">Advisory</option>
+          <option value="mgmtConsult">Management Consulting</option>
+          <option value="riskConsult">Risk Consulting</option>
+          <option value="audit">Audit</option>
+          <option value="enterprise">Enterprise</option>
+          <option value="sellBiz">Selling Your Business</option>
+          <option value="tax">Tax</option>
+        </select>
+      </div>
+    </th>
+    <th>
+      <div class="comboBox">
+        <select id="industry">
+          <option value="" disable selected hidden>Industry</option>
+          <option value="b&c">Building and Construction</option>
+          <option value="c&pt">Chemicals and Performance Technologies</option>
+          <option value="e&nr">Energy and Natural Resources</option>
+          <option value="mining">Mining</option>
+          <option value="finance">Financial Services</option>
+          <option value="insurance">Insurance</option>
+          <option value="fd&cd">Food, Drink and Consumer Goods</option>
+          <option value="f&d">Food and Drink</option>
+          <option value="gov">Government and Public Sector</option>
+          <option value="health">Healthcare</option>
+          <option value="indsutMan">Industrial Manufacturing</option>
+          <option value="infra">Infrastructure</option>
+          <option value="lifeSci">Life Sciences</option>
+          <option value="p&bs">Professional and Business Services</option>
+          <option value="charity">Charities and Not-For-Profit Organizations</option>
+          <option value="estate">Real Estate</option>
+          <option value="retail">Retail</option>
+          <option value="tech">Technology</option>
+        </select>
+      </div>
+    </th>
+    <th>
+      <div class="comboBox">
+        <select id="insight">
+          <option value="" disable selected hidden>Insight</option>
+          <option value="audit">Audit</option>
+          <option value="privAudit">Private Comany Audit</option>
+          <option value="custRevGrow">Customer Revenue Growth</option>
+          <option value="finanMgmt">Financial Management</option>
+          <option value="innov">Innovation</option>
+          <option value="mega">Mega Trends</option>
+          <option value="tech">Technology</option>
+          <option value="opEffect">Operating Effectiveness</option>
+          <option value="taxStrat">Tax Strateges</option>
+          <option value="pp&rc">Public Policy and Regulatory Change</option>
+          <option value="acctStand">Accounting Standards</option>
+          <option value="riskMgmt">Risk Management</option>
+          <option value="boardGov">Board Governance</option>
+          <option value="strategy">Strategy</option>
+          <option value="changeMgmt">Change Management</option>
+          <option value="opEff">Operational Efficiency</option>
+          <option value="transactions">Transactions</option>
+          <option value="m&a">Tax implications of mergers and acquisitions</option>
+          <option value="transf">Transformation</option>
+        </select>
+      </div>
+    </th>
+    <th>
+      <div class="comboBox">
+        <select id="latest">
+          <option value="" disable selected hidden>Latest</option>
+          <!--most recently made event first (default for page)-->
+          <option value="latest">Sort by date (latest first)</option>
+          <!--all event for whatever the currentmonth is-->
+          <option value="thisMonth">This month</option>
+          <!--events where the start date is later than the current date, so haven't happened yet-->
+          <option value="upcoming">Upcoming events</option>
+        </select>
+      </div>
+    </th>
+    <th>
+      <div class="comboBox">
+        <select id="year">
+          <option value="" disable selected hidden>Year</option>
+          <option value="2020">2020</option>
+          <option value="2019">2019</option>
+          <option value="2018">2018</option>
+          <option value="2017">2017</option>
+          <option value="2016">2016</option>
+        </select>
+      </div>
+    </th>
+  </table>
+</div>
+
+<br>
+
+<!--automatically list by latest start date first-->
+<!--this div is going to be kept at a longer width as some events may have
+        a very long name-->
+<div class="eventList">
+  <table>
+    <tr>
+      <td>
+        <!--depending on how you want to do it, the event name could be a link-->
+        <!--or a submit input to the events event menu-->
+        <!--these values, except the img, need to be dynamically retreved from DB-->
+        <img src="../../../../assets/event-images/eventBullet.PNG" alt="bullet"/>
+        <h3 class="listItem">*EVENT NAME*</h3>
+        <p>DD Month - YYYY</p>
+        <p>*EVENT DESCRIPTION*</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <img src="../../../../assets/event-images/eventBullet.PNG" alt="bullet"/>
+        <h3 class="listItem">*EVENT NAME*</h3>
+        <p>DD Month - YYYY</p>
+        <p>*EVENT DESCRIPTION*</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <img src="../../../../assets/event-images/eventBullet.PNG" alt="bullet"/>
+        <h3 class="listItem">*EVENT NAME*</h3>
+        <p>DD Month - YYYY</p>
+        <p>*EVENT DESCRIPTION*</p>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</body>

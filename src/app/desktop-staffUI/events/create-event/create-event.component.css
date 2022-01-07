@@ -1,0 +1,19 @@
+
+/*::ng-deep .mat-step-header{*/
+/* border: black 1px;*/
+/*}*/
+.mat-raised-button.mat-primary{
+  background-color: #005eb8;
+  float: right;
+  width: 400px!important;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.mat-raised-button{
+  background-color: #483698;
+  color: white;
+  width: 400px!important;
+  font-size: larger;
+  font-weight: bolder;
+}

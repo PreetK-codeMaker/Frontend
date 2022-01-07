@@ -1,0 +1,25 @@
+<router-outlet></router-outlet>
+<div id="iPadContainer">
+  <!--  <canvas baseChart-->
+  <!--    [datasets]="barChartData"-->
+  <!--    [labels]="barChartLabels"-->
+  <!--    [options]=" barChartOptions"-->
+  <!--    [plugins]="barChartPlugins"-->
+  <!--    [legend]="barChartLegend"-->
+  <!--    [chartType]="barChartType">-->
+
+  <!--  </canvas>-->
+  <canvas baseChart
+          [data]="pieChartData"
+          [labels]="pieChartLabels"
+          [chartType]="pieChartType"
+          [options]="pieChartOptions"
+  >
+
+  </canvas>
+  <a id="backbutton" [routerLink]="['../']" >Return</a>
+
+</div>
+
+
+

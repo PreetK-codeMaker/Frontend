@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Staff Login</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+</head>
+
+<body>
+<div id="iPadContainer">
+  <header>
+    <div class="loginLogo">
+      <img id="logo" src="../../../assets/images/logonobg.png" alt="KPMG logo"/>
+    </div>
+  </header>
+
+  <h1>LOGIN</h1>
+  <br>
+
+  <p>Please login with your KPMG credentials</p>
+
+  <br>
+
+  <form [formGroup]="staffLogin" >
+
+    <i class="glyphicon glyphicon-user one"></i>
+    <div class="userInput">
+      <input
+        formControlName="staffUsername"
+        class="staffUsername"
+        type="text"
+        name="username"
+        placeholder="Username">
+       <div *ngIf = "staffUsername.touched">
+        <div *ngIf ="staffUsername.errors" class="alert alert-danger">
+          Username is required
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <i class="glyphicon glyphicon-lock"></i>
+    <div class="userInput">
+      <input
+        formControlName="staffPassword"
+        class="staffPassword"
+        type="password"
+        name="password"
+        placeholder="Password">
+       <div *ngIf = "staffPassword.touched">
+        <div *ngIf ="staffPassword.errors" class="alert alert-danger">
+          Password is required
+        </div>
+      </div>
+    </div>
+
+    <br><br><br>
+
+
+  </form>
+
+  <button (click)="submit()" type='submit' class="loginButton">Login</button>
+
+  <br><br><br>
+</div>
+<router-outlet></router-outlet>
+</body>
+</html>
+

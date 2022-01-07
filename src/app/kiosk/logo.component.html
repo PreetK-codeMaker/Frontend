@@ -1,0 +1,23 @@
+
+  <div class="imgHeader">
+  <img id="logo" src="../../assets/images/logo.jpg" alt="KPMG logo"/>
+  </div>
+
+<body>
+  <div class="regHeader">
+    <div *ngIf="showBanner">
+      <div *ngIf="!search">
+      <h1>REGISTRATION</h1>
+      </div>
+      <div *ngIf="search">
+        <h1>CHECK-IN</h1>
+      </div>
+  </div>
+    <div *ngIf="!showBanner">
+      <h1>{{eventName| uppercase}}</h1>
+    </div>
+
+</div>
+</body>
+  <router-outlet></router-outlet>
+

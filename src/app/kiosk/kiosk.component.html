@@ -1,0 +1,39 @@
+
+<head>
+  <title>Main Menu</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+<div id="iPadContainer">
+
+  <br>
+
+  <p>Check in as an invited guest</p>
+
+  <br>
+  <div class="checkIn">
+    <a id="backbutton"
+       [routerLink]="['search']"
+       (click)="newChangeToSearch(true)"
+    >Check In</a>
+  </div>
+  <br><br>
+
+  <img id="divider" src="../../assets/images/orDivider.PNG" alt="page divider"/>
+
+  <br>
+  <div class="regButton">
+    <p>Register as a walk-in</p>
+
+    <br>
+    <div class="forwardReg">
+      <a routerLinkActive='active'
+         (click)="newDataChange(true)"
+         [routerLinkActiveOptions]="{exact: true}"
+         id="forwardbutton"
+         [routerLink]="['registration']">Register</a>
+    </div>
+    <br><br><br>
+  </div>
+</div>
+</body>

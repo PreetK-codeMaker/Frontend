@@ -1,0 +1,78 @@
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+</head>
+<body>
+<div id="iPadContainer">
+  <p>How did you hear about us?</p>
+
+  <br>
+
+  <table class="options">
+    <tr>
+      <td>
+        <label>
+          <input type="checkbox" value="website"/>KPMG Website
+        </label>
+      </td>
+      <td>
+        <label>
+          <input type="checkbox" value="linkedin"/>LinkedIn
+        </label>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label>
+          <input type="checkbox" value="twitter"/>Twitter
+        </label>
+      </td>
+      <td>
+        <label>
+          <input type="checkbox" value="facebook"/>Facebook
+        </label>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label>
+          <input type="checkbox" value="youtube"/>Youtube
+        </label>
+      </td>
+      <td>
+        <label>
+          <input type="checkbox" value="wordofmouth"/>Word of Mouth
+        </label>
+      </td>
+    </tr>
+  </table>
+
+  <br>
+  <div class="otherInput">
+    <i class="glyphicon glyphicon-pencil one"></i>
+    <input type="text" name="other" placeholder="Other">
+  </div>
+  <br><br><br>
+
+  <div class="permissionForm">
+    <label id="legalstmt">
+      <input type="checkbox" [(ngModel)]="checked">Yes, I would like to receive industry insights and offerings in the form of electronic communications from KPMG.
+    </label>
+  </div>
+
+  <br><br><br>
+
+  <a style="float: left;" id="backbutton"
+     [routerLink]="['../']"
+      >RETURN
+  </a>
+  <a style="float: right;" id="forwardbutton"
+      (click)="regNewGuest()"
+
+      [routerLink]="['finished']"
+      >REGISTER
+  </a>
+</div>
+
+</body>
+<!--(click)="showRegesBanner(true)"-->

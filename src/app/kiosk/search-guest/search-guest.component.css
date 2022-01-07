@@ -1,0 +1,123 @@
+
+body
+{
+  font-family: Arial,Helvetica,sans-serif;
+
+}
+
+.glyphicon.glyphicon-user.one
+{
+  color: #483698;
+  padding: 0px 80px;
+  top: 45px;
+}
+
+
+/*dimensions to mimic an iPad for prod purposes on a web page*/
+#iPadContainer
+{
+  margin: auto;
+  height: 100%;
+  width: 40%;
+  margin-left: 30%;
+  margin-right: 30%;
+  /*padding: 25px 25px 50px 25px;*/
+  background-color: white;
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  border-spacing: 10px 100px;
+  padding-bottom: 15px;
+  /*padding-top: 25px;*/
+}
+
+
+
+p
+{
+  color: #02277F;
+  text-align: center;
+  font-size: 16pt;
+  font-family: 'KPMG Light',Arial,Helvetica,sans-serif;
+
+}
+
+[type="text"] {
+  width: 75%;
+  height: 40px;
+  padding-left: 40px;
+  border-left: 5px solid #483698;
+  border-top: 1px solid #9b9b9b;
+  border-right: 1px solid #9b9b9b;
+  border-bottom: 1px solid #9b9b9b;
+  margin-right: 7%;
+  margin-left: 7%;
+  margin-top: 3%;
+  font-family: 'KPMG Light',Arial,Helvetica,sans-serif;
+  border-radius: 5px;
+}
+
+/*styling for a button that moves a user forward through system*/
+.continue
+{
+  border-radius: 8px;
+  font-size: 16pt;
+  color: white;
+  background-color: #00A3A1;
+  padding: 10px 60px;
+  margin-right: 2%;
+  margin-top: 10%;
+  border-style: none;
+  float: right;
+  margin-right: 5%;
+}
+
+.continue:disabled{
+  background-color: #9b9b9b;
+}
+
+.continue:hover{
+  cursor: pointer;
+}
+
+/*styling for a button that moves a user back to previous page*/
+.backbutton
+{
+  border-radius: 8px;
+  font-size: 16pt;
+  color: white;
+  background-color: #0091DA;
+  padding: 10px 80px;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 10%;
+  border-style: none;
+}
+
+.backbutton:hover{
+  cursor: pointer;
+}
+
+table
+{
+  width: 75%;
+  border: 10px solid #F0F0F0;
+}
+
+table
+{
+  width: 75%;
+  border: 10px solid #F0F0F0;
+  margin-left: 12.5%;
+}
+
+table td
+{
+  padding: 5px;
+  border-bottom: 5px solid #F0F0F0;
+  font-size: 14pt;
+  font-family: Arial,Helvetica,sans-serif;
+  text-align: left;
+  cursor: pointer;
+}
+

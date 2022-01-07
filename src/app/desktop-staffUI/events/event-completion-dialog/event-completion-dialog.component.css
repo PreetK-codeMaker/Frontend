@@ -1,0 +1,7 @@
+.mat-raised-button.mat-primary{
+  background-color: #005eb8;
+  float: right;
+  width: 400px!important;
+  font-size: larger;
+  font-weight: bolder;
+}

@@ -1,0 +1,233 @@
+<br>
+<br>
+<br>
+<br>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<mat-horizontal-stepper linear="true" #stepper>
+  <mat-step [stepControl]="firstFormGroup" errorMessage="This is not Complete." class="move" [editable]="isComplete">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Event Information</ng-template>
+      <mat-form-field [style.width.px]="400">
+        <mat-label>Event Name</mat-label>
+        <input matInput placeholder="Event name" formControlName="name" required>
+      </mat-form-field>
+
+      <br>
+
+      <mat-form-field [style.width.px]="320">
+        <mat-label>Insight</mat-label>
+        <mat-select placeholder="Insight" formControlName="Insight" required>
+          <mat-option>--</mat-option>
+          <ng-container  *ngFor="let insi of insightList$|async">
+            <mat-option [value]="insi">
+              {{insi.insightName}}
+            </mat-option>
+          </ng-container>
+        </mat-select>
+      </mat-form-field>
+
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+      <mat-form-field [style.width.px]="260">
+        <mat-label>Service</mat-label>
+        <mat-select formControlName="service" required>
+          <mat-option>--</mat-option>
+          <ng-container  *ngFor="let ser of serviceList$|async">
+            <mat-option [value]="ser">
+              {{ser.serviceName}}
+            </mat-option>
+          </ng-container>
+        </mat-select>
+      </mat-form-field>
+
+      <br>
+
+      <mat-form-field [style.width.px]="320">
+        <mat-label>Industry</mat-label>
+        <mat-select formControlName="Industry" required>
+          <mat-option>--</mat-option>
+          <ng-container  *ngFor="let indus of industryList$|async">
+            <mat-option [value]="indus">
+              {{indus.industryName}}
+            </mat-option>
+          </ng-container>
+        </mat-select>
+      </mat-form-field>
+
+      <br>
+
+      <mat-form-field>
+        <mat-label></mat-label>
+        <input type="Date" matInput formControlName="Date" required>
+      </mat-form-field>
+
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+      <mat-form-field>
+        <mat-label>Start Time</mat-label>
+        <input type="time" matInput placeholder=" time" formControlName="StartTime" required>
+      </mat-form-field>
+
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+      <mat-form-field>
+        <mat-label>End Time</mat-label>
+        <input type="time" matInput placeholder=" time" formControlName="EndTime" required>
+      </mat-form-field>
+
+      <br>
+
+      <mat-form-field>
+        <mat-label>Location</mat-label>
+        <input  matInput placeholder formControlName="Location" required>
+      </mat-form-field>
+
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+      <mat-form-field [style.width.px]="350">
+        <mat-label>Address</mat-label>
+        <input  matInput placeholder="Address" formControlName="Address"  required>
+      </mat-form-field>
+
+      <br>
+
+      <mat-form-field [style.width.px]="150">
+        <mat-label>Budget</mat-label>
+        <input matInput placeholder formControlName="Budget" required>
+      </mat-form-field>
+
+      <div>
+        <button mat-raised-button matStepperNext color="primary">Next</button>
+      </div>
+    </form>
+  </mat-step>
+
+  <mat-step [stepControl]="secondFormGroup" errorMessage="Address is required." [optional]="false"   [editable]="isComplete">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>Employee information</ng-template>
+      <!--      Selecting Partner from the drop down menu. -->
+      <mat-form-field>
+        <mat-label> Partner</mat-label>
+        <mat-select formControlName="partner" required>
+          <mat-option>--</mat-option>
+          <ng-container  *ngFor="let employee of emps$|async">
+            <div *ngIf="employee.roleID.roleID === 3">
+              <mat-option [value]="employee">
+                {{employee.firstName+' '+ employee.lastName}}
+              </mat-option>
+            </div>
+          </ng-container>
+        </mat-select>
+        <mat-error *ngIf="secondFormGroup.get('partner').hasError('required')">Please choose an Partners</mat-error>
+      </mat-form-field>
+
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+      <mat-form-field>
+        <mat-label> Manager</mat-label>
+        <mat-select formControlName="manager" required>
+          <mat-option>--</mat-option>
+          <ng-container  *ngFor="let employee of emps$|async">
+            <div *ngIf="employee.roleID.roleID === 1">
+              <mat-option [value]="employee">
+                {{employee.firstName+' '+ employee.lastName}}
+              </mat-option>
+            </div>
+          </ng-container>
+        </mat-select>
+        <mat-error *ngIf="secondFormGroup.get('manager').hasError('required')">Please choose an Partners</mat-error>
+      </mat-form-field>
+
+      <br>
+
+      <mat-form-field>
+        <mat-label> Staff</mat-label>
+        <mat-select formControlName="staff" required>
+          <mat-option>--</mat-option>
+          <ng-container  *ngFor="let employee of emps$|async">
+            <div *ngIf="employee.roleID.roleID === 2">
+              <mat-option (click)="addStaff(employee)" [value] = employee>
+                {{employee.firstName+' '+ employee.lastName}}
+              </mat-option>
+            </div>
+          </ng-container>
+        </mat-select>
+        <mat-error *ngIf="secondFormGroup.get('staff').hasError('required')">Please choose an Partners</mat-error>
+      </mat-form-field>
+
+      <br>
+
+      <div class="veritcal">
+        <div class="col-md-8 offset-md-2">
+          <h4>Current Staff members in the event: </h4>
+          <span *ngFor="let staff of staffArr; let i = index">
+                        <button class="btn btn-primary"
+                                style="font-size:smaller;margin-bottom:12px;margin-right:2px; background-color: #FFFFFF; color: #005eb8"
+                                title="Click to remove this staff member from the event"
+                                (click)="removeStaff(i)">
+                           {{staff.firstName}}
+                          {{staff.lastName}}
+                          <span class="fa fa-times-circle"></span>
+                  </button>
+                </span>
+        </div>
+      </div>
+
+      <br>
+
+      <div>
+        <button mat-raised-button matStepperPrevious>Back</button>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;
+
+        <button mat-raised-button matStepperNext color="primary">Next</button>
+      </div>
+    </form>
+  </mat-step>
+
+  <mat-step [stepControl]="thirdFormGroup"  [editable]="isComplete">
+    <form [formGroup]="thirdFormGroup">
+      <ng-template matStepLabel>Event description</ng-template>
+      <mat-form-field style="width: 300px;">
+        <mat-label> Description</mat-label>
+        <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1" cdkAutosizeMaxRows="15"
+                  placeholder="Type external information here..."
+                  formControlName="description">
+        </textarea>
+      </mat-form-field>
+    </form>
+
+    <br>
+
+    <div>
+      <button mat-raised-button matStepperPrevious>Back</button>
+
+      &nbsp;&nbsp;&nbsp;&nbsp;
+
+      <button mat-raised-button matStepperNext color="primary">Next</button>
+    </div>
+  </mat-step>
+
+  <mat-step [stepControl]="fourthFormGroup"  [editable]="isComplete" >
+    <form [formGroup]="fourthFormGroup">
+      <ng-template matStepLabel>Additional details</ng-template>
+      <mat-form-field style="width: 300px;">
+        <mat-label> Notes</mat-label>
+        <textarea matInput  cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1" cdkAutosizeMaxRows="10"
+                  placeholder="Type internal information here..."
+                  formControlName="additionalInformation">
+        </textarea>
+      </mat-form-field>
+    </form>
+
+    <br>
+
+    <div>
+      <button mat-raised-button matStepperPrevious>Back</button>
+
+      &nbsp;&nbsp;&nbsp;&nbsp;
+
+      <button mat-raised-button color="primary" (click)="isComplete = !isComplete; addEvent(); openDialog(); " >Create</button>
+    </div>
+  </mat-step>
+</mat-horizontal-stepper>

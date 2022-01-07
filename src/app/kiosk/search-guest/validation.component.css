@@ -1,0 +1,77 @@
+#iPadContainer
+{
+  margin: auto;
+  height: 100%;
+  width: 40%;
+  margin-left: 30%;
+  margin-right: 30%;
+  background-color: white;
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  border-spacing: 10px 100px;
+  padding-bottom: 15px;
+}
+
+.glyphicon.glyphicon-envelope.one
+{
+  color: #483698;
+  padding: 0px 80px;
+  top: 32px;
+}
+
+[type="email"]
+{
+  width: 75%;
+  height: 40px;
+  padding-left: 30px;
+  border-left:5px solid #483698;
+  border-top: 1px solid #9b9b9b;
+  border-right: 1px solid #9b9b9b;
+  border-bottom: 1px solid #9b9b9b;
+  margin: auto;
+  font-family: 'KPMG Light',Arial,Helvetica,sans-serif;
+
+
+}
+
+p
+{
+  color: #02277F;
+  text-align: center;
+  font-size: 18pt;
+  font-family: 'KPMG Light',Arial,Helvetica,sans-serif;
+}
+
+#forwardbutton
+{
+  border-radius: 8px;
+  font-size: 16pt;
+  color: white;
+  background-color: #00A3A1;
+  padding: 10px 60px;
+  /*margin-left: 5%;*/
+  margin-right: 5%;
+  margin-top: 10%;
+  /*bottom: -20%;*/
+  text-decoration: none;
+  font-family: 'KPMG Light',Arial,Helvetica,sans-serif;
+  margin-right: 5%;
+  float: right;
+}
+
+/*styling for a button that moves a user back to previous page*/
+#backbutton
+{
+  border-radius: 8px;
+  font-size: 16pt;
+  color: white;
+  background-color: #0091DA;
+  padding: 10px 70px;
+  margin-top: 10%;
+  /*margin-right: 5%;*/
+  text-decoration: none;
+  font-family: 'KPMG Light',Arial,Helvetica,sans-serif;
+  margin-left: 5%;
+
+}

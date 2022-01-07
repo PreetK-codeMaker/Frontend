@@ -1,0 +1,123 @@
+<br>
+<br>
+<br>
+<br >
+<div class="titleBanner" *ngIf="evt|async as event">
+  <h1 class="titleText">{{event.eventName}} information</h1>
+</div>
+<!--title banner component.html end-->
+
+<br>
+
+<div class="outerBox">
+
+  <table  *ngIf="evt|async as event">
+    <tr>
+      <td colspan="2">
+        <h3 class="sectionTitle">Demographic</h3>
+        <h4 class="contactName">
+          <ng-container *ngIf="evtService | async as serv">
+          Service - {{serv.service.serviceName}}
+          </ng-container>
+          <br>
+          <ng-container *ngIf="evtIndustry| async as indus">
+          Industry - {{indus.industry.industryName}}
+          </ng-container>
+
+          <br>
+          <ng-container *ngIf="evtInsight|async as insi">
+          Insight - {{insi.insight.insightName}}
+          </ng-container>
+        </h4>
+      </td>
+      <td rowspan="3" *ngIf="evtPatner | async as partner">
+        <h3 class="sectionTitle" style="color: #6d2077;">Contacts</h3>
+
+        <!--partner information-->
+        <img src="../../../../assets/event-images/view-Event/personIcon.PNG" class="personIcon"/>
+        <h4 class="contactName">
+          {{partner.firstName}} {{partner.lastName}}
+        </h4>
+        <img class="emailIcon" src="../../../../assets/event-images/view-Event/emailIcon.PNG"/>
+        <p>{{partner.email}}</p>
+        <img class="phoneIcon" src="../../../../assets/event-images/view-Event/phoneIcon.PNG"/>
+        <p>{{partner.phone}}</p>
+
+        <br>
+
+        <!--manager information-->
+        <img src="../../../../assets/event-images/view-Event/personIcon.PNG" class="personIcon"/>
+        <h4 class="contactName">
+          {{event.managerID.firstName}} {{event.managerID.lastName}}
+        </h4>
+        <img class="emailIcon" src="../../../../assets/event-images/view-Event/emailIcon.PNG"/>
+        <p>{{event.managerID.email}}</p>
+        <img class="phoneIcon" src="../../../../assets/event-images/view-Event/phoneIcon.PNG"/>
+        <p>{{event.managerID.phone}}</p>
+
+        <br>
+
+        <!--staff list-->
+        <img src="../../../../assets/event-images/view-Event/peopleIcon.PNG" class="peopleIcon"/>
+        <h5 class="staffList">Staff list</h5>
+        <ul *ngIf="evtEmps|async as emps">
+          <ng-container *ngFor="let emp of emps">
+          <li> {{emp.employee.firstName}} {{emp.employee.lastName}}</li>
+          </ng-container>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: #0091DA;">
+        <h3 class="sectionTitle" style="color: #fff;">Location</h3>
+        <p style="color: #fff; padding-left: 0;">
+          {{event.location}}
+        </p>
+        <br>
+        <h3 class="sectionTitle" style="color: #fff;">Address</h3>
+        <p style="color: #fff; padding-left: 0;">
+          {{event.locationAddress}}
+          <br>
+
+          <br>
+
+          <br>
+
+        </p>
+      </td>
+      <td style="background-color: #00A3A1;">
+        <h3 class="sectionTitle" style="color: #fff; text-align: center;">
+
+          {{event.startDate|date:'dd-MM-yy' }}
+          <br>
+
+        </h3>
+
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h3 class="sectionTitle">Description</h3>
+        <p style="padding-left: 0;">
+          {{event.description}}
+        </p>
+      </td>
+      <td>
+        <h3 class="sectionTitle">Notes</h3>
+        <h4 class="contactName">Budget -
+          {{event.budget}}
+        </h4>
+        <p style="padding-left: 0;">
+          {{event.notes}}
+        </p>
+      </td>
+    </tr>
+  </table>
+
+  <br>
+
+  <!--link back to event menu-->
+  <a class="button1" [routerLink]="['../']">Return</a> <!--TODO link-->
+  <a class="button2" [routerLink]="['../editEvent']">Edit event</a> <!--TODO link-->
+
+</div>

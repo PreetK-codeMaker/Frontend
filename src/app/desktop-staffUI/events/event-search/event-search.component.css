@@ -1,0 +1,146 @@
+/*if page is split into 2 components, this is start of title block*/
+div.titleBlock
+{
+  background: linear-gradient(to bottom, #c8c8c8 2%, #d3d3d3 9%, #ffffff 17%, #ffffff 100%);
+  height: 80px;
+}
+
+h2.pageTitle
+{
+  color: #00338D;
+  font-family: 'KPMG Light',Arial,Helvetica,sans-serif;
+  font-size: 3rem;
+  margin: 13px 0 6px;
+  line-height: 1;
+  font-weight: lighter;
+  padding-top: 25px;
+  margin-left: 6%;
+}
+
+/*end of title block*/
+
+/**************************************************************************/
+
+/*start of filter block*/
+
+div.filterBlock
+{
+  background: #dedede;
+  padding: 15px;
+}
+
+div.comboBox
+{
+  float: left;
+  margin-left: 22.5%;
+}
+
+.comboBox select
+{
+  background:transparent;
+  color: #ffffff;
+  border: 0;
+  border-radius: 0;
+  width: 100px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-radius: 5px;
+  height: 22px;
+  font-family: 'KPMG Light',Arial,Helvetica,sans-serif;
+  font-size: 1rem;
+  line-height: 1;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.comboBox
+{
+  width: 100px;
+  height: 22px;
+  overflow: hidden;
+  background: url("../../../../assets/event-images/comboboxarrow.PNG") no-repeat right #00A3A1; /*redo path*/
+  border: 1px solid #999999;
+  vertical-align: bottom;
+}
+
+input[type="text"]
+{
+  width: 600px;
+  padding: 2px 2px 3px 6px;
+  appearance: none;
+  font-family: 'KPMG Light',Arial,Helvetica,sans-serif;
+  font-weight: bolder;
+  height: 22.5px;
+  vertical-align: bottom;
+}
+
+input[type="image"].search
+{
+  background-color: #6D2077;
+  background-repeat: no-repeat;
+  width:22.5px;
+  height:22.5px;
+  border: 0;
+  background-size: 100% 100%;
+  vertical-align: bottom;
+}
+
+/*end of filter block*/
+
+/*****************************************************************************/
+
+/*start of page content*/
+
+body
+{
+  background-color: #f0f0f0;
+}
+
+div.eventList
+{
+  background-color: #ffffff;
+  width: 76.5%;
+  margin-left: 11.75%;
+}
+
+table
+{
+  width: 100%;
+}
+
+td
+{
+  border-bottom: 20px solid #f0f0f0;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+
+img
+{
+  float: left;
+  height: 100px;
+  padding-top: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+h3.listItem
+{
+  color: #005eb8;
+  font-family: Arial,Helvetica,sans-serif;
+  line-height: 1.2;
+  font-weight: lighter;
+  width: 95%;
+  text-transform: none;
+  margin: 8px 0;
+  font-size: 1.6rem;
+}
+
+p
+{
+  font-family: Arial,Helvetica,sans-serif;
+  line-height: 1;
+  font-weight: lighter;
+  font-size: 1.2rem;
+}
